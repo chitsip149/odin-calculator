@@ -1,17 +1,21 @@
 
+
 .container {
     display: flex;
     flex-direction: column;
-    width: 160px;
-    height: 160px;
-    padding: 16px;
+    width: 150px;
+    height: 220px;
+    padding: 5px;
     border: 2px black solid;
+    background-color: #2F2F2F;
 }
 
 #display {
     padding: 8px;
-    border: 2px black solid;
+    /* border: 2px black solid; */
     text-align: right;
+    background-color: #B2B9B7;
+    font-family: "Space Mono", monospace;
 }
 
 
@@ -19,6 +23,14 @@
     display: flex;
     
     justify-content: space-around;
+    gap: 5px;
+}
+
+button {
+    border-radius: 2px;
+    border: none;
+    padding: 5px;
+    font-family: "Space Mono", monospace;
 }
 
 
@@ -30,7 +42,20 @@
     /* justify-content: center; */
 }
 
-button {
-    flex:1 0 0;
+.row > * {
+    flex: 1;
+}
+
+.row div {
+    display: flex;
+    gap: 5px;
+}
+
+.row div button {
+    flex: 1;
+}
+
+.digit {
+    background-color: #217C7E;
 }
 

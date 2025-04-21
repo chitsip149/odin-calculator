@@ -89,10 +89,16 @@ function changeSign(num){
 const unaryButton = document.querySelector("#unary-operator");
 unaryButton.addEventListener("click", ()=> {
     display.textContent = changeSign(display.textContent);
+    if (display.textContent=="0"){
+        replace = true;
+    }
 })
 
 const percentButton = document.querySelector("#percent");
 percentButton.addEventListener("click", () => {
     display.textContent = display.textContent / 100;
+    if (display.textContent=="0"){
+        replace = true;
+    }
 })
 

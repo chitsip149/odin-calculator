@@ -44,6 +44,11 @@ digitButtons.forEach(btn => {
         else {
             display.textContent += e.target.textContent;
         }
+        if (operator==undefined){
+            operand1 = Number(display.textContent);
+        } else {
+            operand2 = Number(display.textContent);
+        }
     })
 })
 
@@ -59,16 +64,15 @@ operatorButtons.forEach(button => {
 
 const equalButton = document.querySelector("#equal");
 equalButton.addEventListener("click", () => {
-    if (operator!=undefined){
-        operand2=Number(display.textContent);
+    if (operator!=undefined && operand2!=undefined && operand1!=undefined){
         let result = operate(operator, operand1, operand2);
         display.textContent = result;
-
+        operand1=undefined;
+        operand2=undefined;
+        operator=undefined;
+        replace=true;
     }
-    operand1=undefined;
-    operand2=undefined;
-    operator=undefined;
-    replace=true;
+    
 })
 
 const clearButton = document.querySelector("#clear");

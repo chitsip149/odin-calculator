@@ -33,6 +33,7 @@ body {
 
 button {
     font-size: 40px;
+    color: black;
     border-radius: 2px;
     border: none;
     padding: 5px;

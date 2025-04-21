@@ -1,17 +1,22 @@
 
-
+body {
+    display: flex;
+    direction: column;
+    justify-content: center;
+}
 .container {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    height: 220px;
-    padding: 5px;
+    width: 400px;
+    height: 500px;
+    padding: 16px;
     border: 2px black solid;
     background-color: #2F2F2F;
 }
 
 #display {
     padding: 8px;
+    font-size: 40px;
     /* border: 2px black solid; */
     text-align: right;
     background-color: #B2B9B7;
@@ -23,10 +28,11 @@
     display: flex;
     
     justify-content: space-around;
-    gap: 5px;
+    gap: 16px;
 }
 
 button {
+    font-size: 40px;
     border-radius: 2px;
     border: none;
     padding: 5px;
@@ -36,7 +42,7 @@ button {
 
 #buttons {
     flex: 1;
-    padding-top: 5px;
+    padding-top: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,7 +55,7 @@ button {
 
 .row div {
     display: flex;
-    gap: 5px;
+    gap: 16px;
 }
 
 .row div button {

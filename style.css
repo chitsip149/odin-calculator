@@ -36,9 +36,10 @@ button {
 
 #buttons {
     flex: 1;
+    padding-top: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     /* justify-content: center; */
 }
 
@@ -57,5 +58,15 @@ button {
 
 .digit {
     background-color: #217C7E;
+}
+
+.operator,
+#equal {
+    background-color: #FF8F1F;
+}
+
+.single-operator,
+#clear {
+    background-color: #1E90FF;
 }
 

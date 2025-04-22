@@ -52,18 +52,7 @@ digitButtons.forEach(btn => {
     })
 })
 
-
-const operatorButtons = document.querySelectorAll(".operator");
-operatorButtons.forEach(button => {
-    button.addEventListener("click", (e) => {
-        operand1 = Number(display.textContent);
-        operator = e.target.id;
-        replace = true;
-    })
-})
-
-const equalButton = document.querySelector("#equal");
-equalButton.addEventListener("click", () => {
+function evalAndDisplay (){
     if (operator!=undefined && operand2!=undefined && operand1!=undefined){
         let result = operate(operator, operand1, operand2);
         display.textContent = result;
@@ -72,6 +61,22 @@ equalButton.addEventListener("click", () => {
         operator=undefined;
         replace=true;
     }
+}
+
+
+const operatorButtons = document.querySelectorAll(".operator");
+operatorButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        evalAndDisplay();
+        operand1 = Number(display.textContent);
+        operator = e.target.id;
+        replace = true;
+    })
+})
+
+const equalButton = document.querySelector("#equal");
+equalButton.addEventListener("click", () => {
+    evalAndDisplay();
     
 })
 
